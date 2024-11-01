@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demon Slayer - Anime World</title>
+  <style>
+    /* Resetting default margins and paddings */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1a1a1a;
+      color: #f5f5f5;
+      padding: 20px;
+      padding-top: 0px;
+    }
+
+    header {
+      background-color: #1a1a1a;
+      padding: 10px 0;
+    }
+
+    /* Navbar styling */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      padding: 10px 15px;
+      border: 1px solid transparent;
+      transition: 0.3s;
+    }
+
+    /* Hover effect for navbar */
+    nav a:hover {
+      color: red;
+      border: 1px solid red;
+    }
+    /* Header styling */
+    h1 {
+      font-size: 2.5em;
+      font-family: cursive;
+      color: #2e8b8b; /* Teal tone */
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* Info section styling */
+    .info-section {
+      margin-bottom: 30px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    /* Full-width poster image */
+    .poster {
+      width: 30%;
+      height: auto;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Centered, reduced-width styling for table and review form */
+    .centered-content {
+      width: 50%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    /* Ratings table styling */
+    table {
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      border-collapse: collapse;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #333;
+      text-align: center;
+    }
+
+    th {
+      background-color: #2e2d2d;
+      color: #2e8b8b;
+    }
+
+    /* Watch Now button styling */
+    .watch-now {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #2e8b8b;
+      color: #1a1a1a;
+      font-size: 1.2em;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .watch-now:hover {
+      background-color: #095d81; /* Slightly darker teal */
+      transform: scale(1.05);
+    }
+
+    /* Play icon styling */
+    .watch-now::before {
+      content: '▶';
+      margin-right: 8px;
+      font-size: 1.2em;
+    }
+
+    /* Screenshots section styling */
+    .screenshots {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    .screenshots img {
+      width: 15%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Review form styling */
+    .review-form {
+      margin-top: 30px;
+      background-color: #2e2d2d;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      text-align: left;
+    }
+
+    .review-form h2 {
+      color: #2e8b8b;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .review-form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .review-form input[type="text"],
+    .review-form input[type="email"],
+    .review-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #666;
+      border-radius: 5px;
+      background-color: #222;
+      color: #fff;
+    }
+
+    .review-form button {
+      background-color: #2e8b8b;
+      color: #1a1a1a;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      width: 100%;
+    }
+
+    .review-form button:hover {
+      background-color: #257575;
+    }
+    h2{
+        color: #2e8b8b;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page Header -->
+  <header>
+    <nav>
+      <a href="project.html">Home</a>
+      <a href="naruto.html">Naruto</a>
+      <a href="onepeice.html">One Piece</a>
+      <a href="attckontitan.html">Attack on Titan</a>
+      <a href="demonslayer.html">Demon Slayer</a>
+      <a href="myhero.html">My Hero Academia</a>
+    </nav>
+  </header>
+  <h1>Demon Slayer</h1>
+
+  <!-- Full-size Poster Image -->
+   <center>
+  <img src="https://m.media-amazon.com/images/I/71fChZuI+gL._AC_UF1000,1000_QL80_.jpg" alt="Demon Slayer Poster" class="poster">
+</center>
+  <!-- Information Section -->
+  <div class="info-section">
+    <p>Demon Slayer: Kimetsu no Yaiba is a Japanese manga series written and illustrated by Koyoharu Gotouge. The story follows Tanjiro Kamado, a young boy whose family is slaughtered by demons, and his journey to become a demon slayer to avenge his family and cure his sister Nezuko, who was transformed into a demon.</p>
+  </div>
+
+  <!-- Ratings Table (centered and reduced width) -->
+  <div class="centered-content">
+    <table>
+      <tr>
+        <th>Website</th>
+        <th>Rating</th>
+      </tr>
+      <tr>
+        <td>IMDb</td>
+        <td>8.7/10</td>
+      </tr>
+      <tr>
+        <td>MyAnimeList</td>
+        <td>8.6/10</td>
+      </tr>
+      <tr>
+        <td>Crunchyroll</td>
+        <td>4.9/5</td>
+      </tr>
+      <tr>
+        <td>Anime-Planet</td>
+        <td>4.8/5</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Watch Now Button -->
+  <div style="text-align: center; margin-bottom: 30px;">
+    <a href="#" class="watch-now">Watch Now</a>
+  </div>
+<center><h2>Screenshots</h2></center>
+  <!-- Screenshots Section -->
+  <div class="screenshots">
+    <img src="https://pbs.twimg.com/media/FZowCUqVEAANtId.jpg" alt="Demon Slayer Screenshot 1">
+    <img src="https://pbs.twimg.com/media/FZGFOHHaMAEk-Gw?format=jpg&name=large" alt="Demon Slayer Screenshot 2">
+    <img src="https://i.pinimg.com/originals/95/d5/3d/95d53d2154a829db5ff8f4ddff656774.jpg" alt="Demon Slayer Screenshot 3">
+  </div>
+
+  <!-- Review Form (centered and reduced width) -->
+  <div class="centered-content">
+    <div class="review-form">
+      <h2>Write a Review</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+
+        <label for="review">Your Review:</label>
+        <textarea id="review" name="review" rows="5" placeholder="Write your review here..."></textarea>
+
+        <button type="submit">Submit Review</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
