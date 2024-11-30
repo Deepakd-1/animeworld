@@ -5,14 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>One Piece - Anime World</title>
   <style>
-    /* Resetting default margins and paddings */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    /* Body styling */
     body {
       font-family: Arial, sans-serif;
       background-color: #1a1a1a;
@@ -25,7 +23,6 @@
       padding: 10px 0;
     }
 
-    /* Navbar styling */
     nav {
       display: flex;
       justify-content: center;
@@ -38,16 +35,14 @@
       font-size: 1.2em;
       padding: 10px 15px;
       border: 1px solid transparent;
-      transition: 0.3s;
     }
 
-    /* Hover effect for navbar */
     nav a:hover {
       color: red;
       border: 1px solid red;
     }
 
-    /* Header styling */
+
     h1 {
       font-size: 2.5em;
       font-family: cursive;
@@ -56,14 +51,12 @@
       margin-bottom: 20px;
     }
 
-    /* Info section styling */
     .info-section {
       margin-bottom: 30px;
       line-height: 1.6;
       text-align: center;
     }
 
-    /* Full-width poster image */
     .poster {
       width: 30%;
       height: auto;
@@ -72,14 +65,12 @@
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
     }
 
-    /* Centered, reduced-width styling for table and review form */
     .centered-content {
       width: 50%;
       margin: 0 auto;
       text-align: center;
     }
 
-    /* Ratings table styling */
     table {
       width: 100%;
       margin-top: 20px;
@@ -99,7 +90,6 @@
       color: #00ccff;
     }
 
-    /* Watch Now button styling */
     .watch-now {
       display: inline-flex;
       align-items: center;
@@ -112,7 +102,6 @@
       border-radius: 8px;
       text-decoration: none;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-      transition: background-color 0.3s, transform 0.3s;
     }
 
     .watch-now:hover {
@@ -120,14 +109,12 @@
       transform: scale(1.05);
     }
 
-    /* Play icon styling */
     .watch-now::before {
       content: '▶';
       margin-right: 8px;
       font-size: 1.2em;
     }
 
-    /* Screenshots section styling */
     .screenshots {
       display: flex;
       justify-content: center;
@@ -143,7 +130,6 @@
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
     }
 
-    /* Review form styling */
     .review-form {
       margin-top: 30px;
       background-color: #333;
@@ -171,11 +157,17 @@
     .review-form textarea {
       width: 100%;
       padding: 10px;
-      margin-bottom: 15px;
+      /* margin-bottom: 15px; */
       border: 1px solid #666;
       border-radius: 5px;
       background-color: #222;
       color: #fff;
+    }
+    .span{
+      
+      margin-bottom: 15px;
+      font-size: smaller;
+      color: red;
     }
 
     .review-form button {
@@ -198,7 +190,6 @@
 </head>
 <body>
 
-  <!-- Page Header -->
   <header>
     <nav>
       <a href="project.html">Home</a>
@@ -210,17 +201,13 @@
     </nav>
   </header>
   <h1>One Piece</h1>
-
-  <!-- Full-size Poster Image -->
    <center>
   <img src="https://c4.wallpaperflare.com/wallpaper/838/806/561/satoru-gojo-one-piece-hd-wallpaper-preview.jpg" alt="One Piece Poster" class="poster">
 </center>
-  <!-- Information Section -->
   <div class="info-section">
     <p>One Piece is a Japanese manga series written and illustrated by Eiichiro Oda. It has been serialized in Shueisha's Weekly Shōnen Jump magazine since 1997. The story follows the adventures of Monkey D. Luffy, a young pirate with the ability to stretch his body like rubber after eating a Devil Fruit, as he searches for the legendary treasure known as "One Piece" and pursues his dream to become the Pirate King.</p>
   </div>
 
-  <!-- Ratings Table (centered and reduced width) -->
   <div class="centered-content">
     <table>
       <tr>
@@ -246,34 +233,36 @@
     </table>
   </div>
 
-  <!-- Watch Now Button -->
   <div style="text-align: center; margin-bottom: 30px;">
-    <a href="#" class="watch-now">Watch Now</a>
+    <a href="https://www.crunchyroll.com/series/GRMG8ZQZR/one-piece" class="watch-now" target="_blank" onclick="Redirection()">Watch Now</a>
   </div>
 
-  <!-- Screenshots Section -->
   <div class="screenshots">
     <img src="https://pbs.twimg.com/media/EkhFwojUcAA4Dbq?format=jpg&name=large" alt="One Piece Screenshot 1">
-    <img src="https://sm.ign.com/ign_in/screenshot/default/one-piece-remake_mjwj.jpg" alt="One Piece Screenshot 2">
+    <img src="https://e1.pxfuel.com/desktop-wallpaper/338/142/desktop-wallpaper-one-piece-wano-op-screenshots-zoro-wano.jpg" alt="One Piece Screenshot 2">
     <img src="https://i.redd.it/some-of-my-favourite-screenshots-from-1100-slightly-v0-8gfuuh8gl9uc1.jpg?width=3840&format=pjpg&auto=webp&s=3653639beded75fad86f2827d8be5496413dcfe5" alt="One Piece Screenshot 3">
   </div>
 
-  <!-- Review Form (centered and reduced width) -->
   <div class="centered-content">
     <div class="review-form">
       <h2>Write a Review</h2>
-      <form>
+      <form onsubmit="return(FormSubmission())">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" placeholder="Enter your name">
+        <div class="span"><span id="span"></span></div>
 
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" placeholder="Enter your email">
+        <div class="span"><span id="span2"></span></div>
+
 
         <label for="review">Your Review:</label>
         <textarea id="review" name="review" rows="5" placeholder="Write your review here..."></textarea>
+        <div class="span"><span id="span3"></span></div>
 
         <button type="submit">Submit Review</button>
       </form>
+      <script src="js.js"></script>
     </div>
   </div>
 
