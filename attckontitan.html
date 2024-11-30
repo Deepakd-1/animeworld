@@ -5,14 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Attack on Titan - Anime World</title>
   <style>
-    /* Resetting default margins and paddings */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    /* Body styling */
     body {
       font-family: Arial, sans-serif;
       background-color: #1a1a1a;
@@ -25,7 +23,6 @@
       padding: 10px 0;
     }
 
-    /* Navbar styling */
     nav {
       display: flex;
       justify-content: center;
@@ -41,13 +38,11 @@
       transition: 0.3s;
     }
 
-    /* Hover effect for navbar */
     nav a:hover {
       color: red;
       border: 1px solid red;
     }
 
-    /* Header styling */
     h1 {
       font-size: 2.5em;
       font-family: cursive;
@@ -56,14 +51,12 @@
       margin-bottom: 20px;
     }
 
-    /* Info section styling */
     .info-section {
       margin-bottom: 30px;
       line-height: 1.6;
       text-align: center;
     }
 
-    /* Full-width poster image */
     .poster {
       width: 30%;
       height: auto;
@@ -72,14 +65,12 @@
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
     }
 
-    /* Centered, reduced-width styling for table and review form */
     .centered-content {
       width: 50%;
       margin: 0 auto;
       text-align: center;
     }
 
-    /* Ratings table styling */
     table {
       width: 100%;
       margin-top: 20px;
@@ -99,7 +90,6 @@
       color: #a67c52;
     }
 
-    /* Watch Now button styling */
     .watch-now {
       display: inline-flex;
       align-items: center;
@@ -120,14 +110,12 @@
       transform: scale(1.05);
     }
 
-    /* Play icon styling */
     .watch-now::before {
       content: '▶';
       margin-right: 8px;
       font-size: 1.2em;
     }
 
-    /* Screenshots section styling */
     .screenshots {
       display: flex;
       justify-content: center;
@@ -143,7 +131,6 @@
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
     }
 
-    /* Review form styling */
     .review-form {
       margin-top: 30px;
       background-color: #3b3a3a;
@@ -171,11 +158,17 @@
     .review-form textarea {
       width: 100%;
       padding: 10px;
-      margin-bottom: 15px;
+      /* margin-bottom: 15px; */
       border: 1px solid #666;
       border-radius: 5px;
       background-color: #222;
       color: #fff;
+    }
+    .span{
+      
+      margin-bottom: 15px;
+      font-size: smaller;
+      color: red;
     }
 
     .review-form button {
@@ -198,7 +191,6 @@
 </head>
 <body>
 
-  <!-- Page Header -->
   <header>
     <nav>
       <a href="project.html">Home</a>
@@ -211,7 +203,6 @@
   </header>
   <h1>Attack on Titan</h1>
 
-  <!-- Full-size Poster Image -->
    <center>
   <img src="https://w0.peakpx.com/wallpaper/917/626/HD-wallpaper-attack-on-titan-poster-digital-2022.jpg" alt="Attack on Titan Poster" class="poster">
 </center>
@@ -246,34 +237,36 @@
     </table>
   </div>
 
-  <!-- Watch Now Button -->
   <div style="text-align: center; margin-bottom: 30px;">
-    <a href="#" class="watch-now">Watch Now</a>
+    <a href="https://www.primevideo.com/detail/0OBFWER39MSK6AW8LH870ZI3IY/ref=atv_dl_rdr" class="watch-now" target="_blank" onclick="Redirection()">Watch Now</a>
   </div>
 
-  <!-- Screenshots Section -->
   <div class="screenshots">
     <img src="https://i.pinimg.com/originals/1c/27/57/1c275768f92d4f515830a0bf82be0e61.jpg" alt="Attack on Titan Screenshot 1">
     <img src="https://pbs.twimg.com/media/EZNJlfAUEAEhY3A.jpg:large" alt="Attack on Titan Screenshot 2">
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaszA-K0Z3RsnfrF-XkcFKsm5LUWgIhjSN5A&s" alt="Attack on Titan Screenshot 3">
   </div>
 
-  <!-- Review Form (centered and reduced width) -->
   <div class="centered-content">
     <div class="review-form">
       <h2>Write a Review</h2>
-      <form>
+      <form onsubmit="return(FormSubmission())">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" placeholder="Enter your name">
+        <div class="span"><span id="span"></span></div>
 
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" placeholder="Enter your email">
+        <div class="span"><span id="span2"></span></div>
+
 
         <label for="review">Your Review:</label>
         <textarea id="review" name="review" rows="5" placeholder="Write your review here..."></textarea>
+        <div class="span"><span id="span3"></span></div>
 
         <button type="submit">Submit Review</button>
       </form>
+      <script src="js.js"></script>
     </div>
   </div>
 
