@@ -5,14 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Demon Slayer - Anime World</title>
   <style>
-    /* Resetting default margins and paddings */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    /* Body styling */
     body {
       font-family: Arial, sans-serif;
       background-color: #1a1a1a;
@@ -26,7 +24,6 @@
       padding: 10px 0;
     }
 
-    /* Navbar styling */
     nav {
       display: flex;
       justify-content: center;
@@ -42,7 +39,6 @@
       transition: 0.3s;
     }
 
-    /* Hover effect for navbar */
     nav a:hover {
       color: red;
       border: 1px solid red;
@@ -51,19 +47,17 @@
     h1 {
       font-size: 2.5em;
       font-family: cursive;
-      color: #2e8b8b; /* Teal tone */
+      color: #2e8b8b; 
       text-align: center;
       margin-bottom: 20px;
     }
 
-    /* Info section styling */
     .info-section {
       margin-bottom: 30px;
       line-height: 1.6;
       text-align: center;
     }
 
-    /* Full-width poster image */
     .poster {
       width: 30%;
       height: auto;
@@ -72,14 +66,12 @@
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
     }
 
-    /* Centered, reduced-width styling for table and review form */
     .centered-content {
       width: 50%;
       margin: 0 auto;
       text-align: center;
     }
 
-    /* Ratings table styling */
     table {
       width: 100%;
       margin-top: 20px;
@@ -99,7 +91,6 @@
       color: #2e8b8b;
     }
 
-    /* Watch Now button styling */
     .watch-now {
       display: inline-flex;
       align-items: center;
@@ -120,14 +111,12 @@
       transform: scale(1.05);
     }
 
-    /* Play icon styling */
     .watch-now::before {
       content: '▶';
       margin-right: 8px;
       font-size: 1.2em;
     }
 
-    /* Screenshots section styling */
     .screenshots {
       display: flex;
       justify-content: center;
@@ -171,11 +160,17 @@
     .review-form textarea {
       width: 100%;
       padding: 10px;
-      margin-bottom: 15px;
+      /* margin-bottom: 15px; */
       border: 1px solid #666;
       border-radius: 5px;
       background-color: #222;
       color: #fff;
+    }
+    .span{
+      
+      margin-bottom: 15px;
+      font-size: smaller;
+      color: red;
     }
 
     .review-form button {
@@ -214,7 +209,6 @@
   </header>
   <h1>Demon Slayer</h1>
 
-  <!-- Full-size Poster Image -->
    <center>
   <img src="https://m.media-amazon.com/images/I/71fChZuI+gL._AC_UF1000,1000_QL80_.jpg" alt="Demon Slayer Poster" class="poster">
 </center>
@@ -223,7 +217,6 @@
     <p>Demon Slayer: Kimetsu no Yaiba is a Japanese manga series written and illustrated by Koyoharu Gotouge. The story follows Tanjiro Kamado, a young boy whose family is slaughtered by demons, and his journey to become a demon slayer to avenge his family and cure his sister Nezuko, who was transformed into a demon.</p>
   </div>
 
-  <!-- Ratings Table (centered and reduced width) -->
   <div class="centered-content">
     <table>
       <tr>
@@ -249,9 +242,8 @@
     </table>
   </div>
 
-  <!-- Watch Now Button -->
   <div style="text-align: center; margin-bottom: 30px;">
-    <a href="#" class="watch-now">Watch Now</a>
+    <a href="https://www.crunchyroll.com/series/GY5P48XEY/demon-slayer-kimetsu-no-yaiba?utm_campaign=media_actions&utm_medium=deep_link&utm_source=google" class="watch-now" target="_blank" onclick="Redirection()">Watch Now</a>
   </div>
 <center><h2>Screenshots</h2></center>
   <!-- Screenshots Section -->
@@ -261,22 +253,26 @@
     <img src="https://i.pinimg.com/originals/95/d5/3d/95d53d2154a829db5ff8f4ddff656774.jpg" alt="Demon Slayer Screenshot 3">
   </div>
 
-  <!-- Review Form (centered and reduced width) -->
   <div class="centered-content">
     <div class="review-form">
       <h2>Write a Review</h2>
-      <form>
+      <form onsubmit="return(FormSubmission())">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" placeholder="Enter your name">
+        <div class="span"><span id="span"></span></div>
 
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" placeholder="Enter your email">
+        <div class="span"><span id="span2"></span></div>
+
 
         <label for="review">Your Review:</label>
         <textarea id="review" name="review" rows="5" placeholder="Write your review here..."></textarea>
+        <div class="span"><span id="span3"></span></div>
 
         <button type="submit">Submit Review</button>
       </form>
+      <script src="js.js"></script>
     </div>
   </div>
 
